@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrueCar Homework</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="centered">
+  <img class="logo" src="/img/logo.png">
+  <!-- Some formatting done to work around inline-block gaps -->
+  <div class="todo">
+    <section class="todo-section-form">
+      <form class="todo-add-form" name="addItem" action="">
+        <div class="form-group-button-right">
+          <label for="todo_add">Add Item:</label><input id="todo_add" type="text" maxlength="255" class="todo-add-input"><button type="submit" class="button-green arrow-right todo-add-todo">Add</button>
+        </div>
+      </form>
+      <div class="form-group">
+        <!-- Input ID needed for label accessibility - sadly makes this more difficult to reuse -->
+        <label for="todo_json">JSON:</label><textarea id="todo_json" rows="3" class="todo-json-input"></textarea>
+      </div>
+      <div class="form-group-no-label">
+        <button type="button" class="button-green todo-load-json">Load JSON</button>
+      </div>
+      <div class="form-group-error todo-json-error hide"></div>
+    </section><section class="todo-section-list">
+      <h3 class="header-above">List</h3>
+      <ol class="todo-list">
+      </ol>
+    </section>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
